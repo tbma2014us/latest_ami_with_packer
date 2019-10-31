@@ -1,0 +1,45 @@
+{
+  "variables": {
+    "region": "us-east-1"
+  },
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "profile": "default",
+      "region": "{{user `region`}}",
+      "instance_type": "t3.nano",
+      "source_ami_filter": {
+        "filters": {
+          "architecture": "x86_64",
+          "name": "amzn2-ami-hvm-*",
+          "root-device-type": "ebs",
+          "virtualization-type": "hvm"
+        },
+        "owners": [
+          "137112412989"
+        ],
+        "most_recent": true
+      },
+      "ssh_username": "ec2-user",
+      "ami_name": "my-amzn2-linux-{{isotime \"2006-01-02-150405\"}}",
+      "ami_description": "Latest Amazon Linux 2.0 with updates",
+      "run_tags": {
+        "Name": "packer-builder-agent"
+      },
+      "tags": {
+        "Name": "my-amzn2-linux-2.0",
+        "Author": "alex.zimin@gmail.com"
+      }
+    }
+  ],
+  "provisioners": [
+    {
+      "inline": [
+        "while [ ! -f /var/lib/cloud/instance/boot-finished ]; do echo 'Waiting for cloud-init...'; sleep 1; done",
+        "sudo yum update -y",
+        "sudo yum autoremove -y"
+      ],
+      "type": "shell"
+    }
+  ]
+}
