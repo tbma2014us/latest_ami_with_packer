@@ -1,4 +1,6 @@
-# Build latest updated AMIs for popular distributions with Packer
+# Latest updated AMIs with Packer
+
+Build AWS AMI images for Linux dostributions using Packer based on the official AMI images in the eu-east-1
 
 1. Install packer from https://www.packer.io/
 2. Configure your AWS access as ~/.aws/credentials, environment variables or IAM role.
