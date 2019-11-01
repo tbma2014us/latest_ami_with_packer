@@ -20,3 +20,6 @@ Build  latest fully updated AWS AMI images for Linux dostributions using Packer 
 
 ### Latest Ubuntu 18.04 LTS with updates
 [latest_ubuntu_18.04_lts_x86_64.json](latest_ubuntu_18.04_lts_x86_64.json)
+
+### Latest Ubuntu 16.04 LTS with updates
+[latest_ubuntu_16.04_lts_x86_64.json](latest_ubuntu_16.04_lts_x86_64.json)
