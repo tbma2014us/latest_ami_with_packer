@@ -9,8 +9,17 @@ Produces latest fully updated AWS AMI images for Linux distributions using Packe
 ### Latest Amazon Linux 2.0 with updates
 [latest_amazon_linux_2.0_x86_64.json](latest_amazon_linux_2.0_x86_64.json)
  
+### Latest Amazon Linux 2018 with updates
+[latest_amazon_linux_2018_x86_64.json](latest_amazon_linux_2018_x86_64.json)
+ 
 ### Latest FAI Debian image with updates
 [latest_debian_stretch_x86_64.json](latest_debian_stretch_x86_64.json)
+
+### Latest Fedora 30 Cloud Base with updates
+[latest_fedora_cloud_base_30_x86_64.json](latest_fedora_cloud_base_30_x86_64.json)
+
+### Latest Fedora 31 Cloud Base with updates
+[latest_fedora_cloud_base_31_x86_64.json](latest_fedora_cloud_base_31_x86_64.json)
 
 ### Red Hat Enterprise Linux 8 (HVM) with updates
 [latest_redhat_enterprise_linux_8_x86_64.json](latest_redhat_enterprise_linux_8_x86_64.json)
