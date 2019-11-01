@@ -1,2 +1,2 @@
 * linguist-vendored
-*.json linguist-language=Packer
+*.json linguist-language=JSON
