@@ -15,11 +15,11 @@ Produces latest fully updated AWS AMI images for Linux distributions using Packe
 ### Latest FAI Debian image with updates
 [latest_debian_stretch_x86_64.json](latest_debian_stretch_x86_64.json)
 
-### Latest Fedora 30 Cloud Base with updates
-[latest_fedora_cloud_base_30_x86_64.json](latest_fedora_cloud_base_30_x86_64.json)
-
 ### Latest Fedora 31 Cloud Base with updates
 [latest_fedora_cloud_base_31_x86_64.json](latest_fedora_cloud_base_31_x86_64.json)
+
+### Latest Fedora 30 Cloud Base with updates
+[latest_fedora_cloud_base_30_x86_64.json](latest_fedora_cloud_base_30_x86_64.json)
 
 ### Red Hat Enterprise Linux 8 (HVM) with updates
 [latest_redhat_enterprise_linux_8_x86_64.json](latest_redhat_enterprise_linux_8_x86_64.json)
@@ -27,8 +27,8 @@ Produces latest fully updated AWS AMI images for Linux distributions using Packe
 ### SUSE Linux Enterprise Server 15 SP1 with updates
 [latest_suse_sles_15_sp1.json](latest_suse_sles_15_sp1.json)
 
-### Latest Ubuntu 16.04 LTS with updates
-[latest_ubuntu_16.04_lts_x86_64.json](latest_ubuntu_16.04_lts_x86_64.json)
-
 ### Latest Ubuntu 18.04 LTS with updates
 [latest_ubuntu_18.04_lts_x86_64.json](latest_ubuntu_18.04_lts_x86_64.json)
+
+### Latest Ubuntu 16.04 LTS with updates
+[latest_ubuntu_16.04_lts_x86_64.json](latest_ubuntu_16.04_lts_x86_64.json)
