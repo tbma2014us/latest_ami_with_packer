@@ -18,8 +18,8 @@ Build  latest fully updated AWS AMI images for Linux dostributions using Packer 
 ### SUSE Linux Enterprise Server 15 SP1 with updates
 [latest_suse_sles_15_sp1.json](latest_suse_sles_15_sp1.json)
 
-### Latest Ubuntu 18.04 LTS with updates
-[latest_ubuntu_18.04_lts_x86_64.json](latest_ubuntu_18.04_lts_x86_64.json)
-
 ### Latest Ubuntu 16.04 LTS with updates
 [latest_ubuntu_16.04_lts_x86_64.json](latest_ubuntu_16.04_lts_x86_64.json)
+
+### Latest Ubuntu 18.04 LTS with updates
+[latest_ubuntu_18.04_lts_x86_64.json](latest_ubuntu_18.04_lts_x86_64.json)
