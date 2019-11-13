@@ -6,6 +6,7 @@ Produces latest fully updated AWS AMI images for Linux distributions using Packe
 1. Install packer from https://www.packer.io/
 2. Configure your AWS access as ~/.aws/credentials, [environment variables or IAM role](https://www.packer.io/docs/builders/amazon.html#authentication).
 3. Run ```packer build <name>.json``` to create image
+ * Run with other than default profile ```AWS_PROFILE=myprofile packer build <name>.json``` 
 
 ### Latest Amazon Linux 2.0 with updates
 [latest_amazon_linux_2.0_x86_64.json](latest_amazon_linux_2.0_x86_64.json)
