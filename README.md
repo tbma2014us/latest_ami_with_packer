@@ -14,10 +14,10 @@ Produces latest fully updated AWS AMI images for Linux distributions using Packe
 ### Latest Amazon Linux 2018 with updates
 [latest_amazon_linux_2018_x86_64.json](latest_amazon_linux_2018_x86_64.json)
 
-### Latest FAI Debian 10 (buster) image with updates
+### Latest Debian 10 (buster) image with updates
 [latest_debian_buster_x86_64.json](latest_debian_buster_x86_64.json)
  
-### Latest FAI Debian 9 (stretch) image with updates
+### Latest Debian 9 (stretch) image with updates
 [latest_debian_stretch_x86_64.json](latest_debian_stretch_x86_64.json)
 
 ### Latest Fedora 31 Cloud Base with updates
