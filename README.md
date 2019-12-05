@@ -8,6 +8,8 @@ Produces latest fully updated AWS AMI images for Linux distributions using Packe
 3. Run ```packer build <name>.json``` to create image.
    1. Run with other than default profile: ```AWS_PROFILE=myprofile packer build <name>.json```
 
+## x86_64:
+
 ### Latest Amazon Linux 2.0 with updates
 [latest_amazon_linux_2.0_x86_64.json](latest_amazon_linux_2.0_x86_64.json)
  
@@ -37,3 +39,17 @@ Produces latest fully updated AWS AMI images for Linux distributions using Packe
 
 ### Latest Ubuntu 16.04 LTS with updates
 [latest_ubuntu_16.04_lts_x86_64.json](latest_ubuntu_16.04_lts_x86_64.json)
+
+## ARM 64:
+
+### Latest Amazon Linux 2.0 with updates
+[latest_amazon_linux_2.0_arm64.json](latest_amazon_linux_2.0_arm64.json)
+
+### Latest Fedora 31 Cloud Base with updates
+[latest_fedora_cloud_base_31_arm64.json](latest_fedora_cloud_base_31_arm64.json)
+
+### Red Hat Enterprise Linux 8 with updates
+[latest_redhat_enterprise_linux_8_arm64.json](latest_redhat_enterprise_linux_8_arm64.json)
+
+### Latest Ubuntu 18.04 LTS with updates
+[latest_ubuntu_18.04_lts_arm64.json](latest_ubuntu_18.04_lts_arm64.json)

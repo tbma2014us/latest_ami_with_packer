@@ -8,10 +8,10 @@
       "type": "amazon-ebs",
       "profile": "{{user `aws_profile`}}",
       "region": "{{user `region`}}",
-      "instance_type": "t3.nano",
+      "instance_type": "a1.medium",
       "source_ami_filter": {
         "filters": {
-          "architecture": "x86_64",
+          "architecture": "arm64",
           "name": "amzn2-ami-hvm-*",
           "root-device-type": "ebs",
           "virtualization-type": "hvm"
@@ -22,14 +22,14 @@
         "most_recent": true
       },
       "ssh_username": "ec2-user",
-      "ami_name": "my-amzn2-linux-x86_64-{{isotime \"2006-01-02-150405\"}}",
-      "ami_description": "Latest Amazon Linux 2.0 x86_64 with updates",
+      "ami_name": "my-amzn2-linux-arm64-{{isotime \"2006-01-02-150405\"}}",
+      "ami_description": "Latest Amazon Linux 2.0 arm64 with updates",
       "run_tags": {
         "Name": "packer-builder-agent"
       },
       "tags": {
-        "Name": "my-amzn2-linux-2.0-x86_64",
-        "architecture": "x86_64",
+        "Name": "my-amzn2-linux-2.0-arm64",
+        "architecture": "arm64",
         "Author": "alex.zimin@gmail.com"
       }
     }

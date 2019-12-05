@@ -22,13 +22,14 @@
         "most_recent": true
       },
       "ssh_username": "ec2-user",
-      "ami_name": "my-amzn-ami-hvm-2018-{{isotime \"2006-01-02-150405\"}}",
-      "ami_description": "Latest Amazon Linux 2018 with updates",
+      "ami_name": "my-amzn-ami-hvm-2018-x86_64-{{isotime \"2006-01-02-150405\"}}",
+      "ami_description": "Latest Amazon Linux 2018 x86_64 with updates",
       "run_tags": {
         "Name": "packer-builder-agent"
       },
       "tags": {
-        "Name": "my-amzn-ami-hvm-2018",
+        "Name": "my-amzn-ami-hvm-2018-x86_64",
+        "architecture": "x86_64",
         "Author": "alex.zimin@gmail.com"
       }
     }
@@ -38,7 +39,8 @@
       "inline": [
         "while [ ! -f /var/lib/cloud/instance/boot-finished ]; do echo 'Waiting for cloud-init...'; sleep 1; done",
         "sudo yum update -y",
-        "sudo yum autoremove -y"
+        "sudo yum autoremove -y",
+        "cat /etc/system-release"
       ],
       "type": "shell"
     }

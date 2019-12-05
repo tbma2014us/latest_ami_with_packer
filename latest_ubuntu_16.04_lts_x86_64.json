@@ -40,7 +40,8 @@
         "sudo DEBIAN_FRONTEND=noninteractive apt-get update -y",
         "sudo DEBIAN_FRONTEND=noninteractive apt-get dist-upgrade -y",
         "sudo DEBIAN_FRONTEND=noninteractive apt-get autoclean -y",
-        "sudo DEBIAN_FRONTEND=noninteractive apt-get autoremove -y"
+        "sudo DEBIAN_FRONTEND=noninteractive apt-get autoremove -y",
+        "lsb_release -a"
       ],
       "type": "shell"
     }
