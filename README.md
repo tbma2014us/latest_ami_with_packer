@@ -34,6 +34,9 @@ Produces latest fully updated AWS AMI images for Linux distributions using Packe
 ### SUSE Linux Enterprise Server 15 SP1 with updates
 [latest_suse_sles_15_sp1.json](latest_suse_sles_15_sp1.json)
 
+### Latest Ubuntu 29.04 LTS with updates
+[latest_ubuntu_20.04_lts_x86_64.json](latest_ubuntu_20.04_lts_x86_64.json)
+
 ### Latest Ubuntu 18.04 LTS with updates
 [latest_ubuntu_18.04_lts_x86_64.json](latest_ubuntu_18.04_lts_x86_64.json)
 
@@ -50,6 +53,9 @@ Produces latest fully updated AWS AMI images for Linux distributions using Packe
 
 ### Red Hat Enterprise Linux 8 with updates
 [latest_redhat_enterprise_linux_8_arm64.json](latest_redhat_enterprise_linux_8_arm64.json)
+
+### Latest Ubuntu 20.04 LTS with updates
+[latest_ubuntu_20.04_lts_arm64.json](latest_ubuntu_20.04_lts_arm64.json)
 
 ### Latest Ubuntu 18.04 LTS with updates
 [latest_ubuntu_18.04_lts_arm64.json](latest_ubuntu_18.04_lts_arm64.json)
