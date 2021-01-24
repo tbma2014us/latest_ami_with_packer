@@ -62,3 +62,5 @@ Produces latest fully updated AWS AMI images for Linux distributions using Packe
 
 ### Latest Ubuntu 18.04 LTS with updates
 [latest_ubuntu_18.04_lts_arm64.json](latest_ubuntu_18.04_lts_arm64.json)
+
+[![APACHE 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg?longCache=true&style=for-the-badge)](LICENSE)
