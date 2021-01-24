@@ -43,6 +43,9 @@ Produces latest fully updated AWS AMI images for Linux distributions using Packe
 ### Latest Ubuntu 16.04 LTS with updates
 [latest_ubuntu_16.04_lts_x86_64.json](latest_ubuntu_16.04_lts_x86_64.json)
 
+### Latest Clear Linux 3xxxx with updates
+[latest_clear_linux-3xxxx_x86_64.json](latest_clear_linux-3xxxx_x86_64.json)
+
 ## ARM 64:
 
 ### Latest Amazon Linux 2.0 with updates

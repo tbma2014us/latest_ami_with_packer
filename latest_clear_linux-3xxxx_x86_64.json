@@ -1,0 +1,94 @@
+{
+  "variables": {
+    "aws_profile": "{{env `AWS_PROFILE`}}",
+    "region": "us-east-1"
+  },
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "profile": "{{user `aws_profile`}}",
+      "region": "{{user `region`}}",
+      "instance_type": "t3.nano",
+      "source_ami_filter": {
+        "filters": {
+          "name": "clear-3*",
+          "product-code": "4ks0lssia3phyyrbckdk9xgba"
+        },
+        "owners": [
+          "679593333241"
+        ],
+        "most_recent": true
+      },
+      "ssh_username": "clear",
+      "ami_name": "my-clear-linux-3xxxx-{{isotime \"2006-01-02-150405\"}}",
+      "ami_description": "Latest Clear linux 3xxxx with updates",
+      "run_tags": {
+        "Name": "packer-builder-agent"
+      },
+      "ami_block_device_mappings": [
+        {
+          "device_name": "/dev/sda1",
+          "volume_size": 8,
+          "volume_type": "gp2",
+          "delete_on_termination": true
+        }
+      ],
+      "launch_block_device_mappings": [
+        {
+          "device_name": "/dev/sda1",
+          "volume_size": 8,
+          "volume_type": "gp2",
+          "delete_on_termination": true
+        }
+      ],
+      "tags": {
+        "Name": "my-clear-linux-3xxxx",
+        "Author": "alex.zimin@gmail.com"
+      }
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "clear_linux_sshd_config",
+      "destination": "/tmp/sshd_config"
+    },
+    {
+      "type": "file",
+      "source": "clear_linux_post-startup",
+      "destination": "/tmp/post-startup.service"
+    },
+    {
+      "type": "file",
+      "source": "clear_linux_post-startup.sh",
+      "destination": "/tmp/post-startup.sh"
+    },
+    {
+      "inline": [
+        "SWUPD=$(sudo pidof swupd); while ps -p ${SWUPD} > /dev/null; do echo 'Waiting for swupd...'; sleep 10; done;",
+        "sudo swupd autoupdate --disable",
+        "sudo systemctl stop tallow",
+        "sudo systemctl mask tallow",
+        "sudo swupd bundle-add curl python-extras unzip --no-progress",
+        "sudo install /tmp/post-startup.service /etc/systemd/system/post-startup.service",
+        "sudo install /tmp/post-startup.sh /bin/post-startup.sh -m u+rx",
+        "sudo systemctl daemon-reload",
+        "sudo systemctl enable post-startup",
+        "RND=$(openssl rand -base64 32); PWD=$(openssl passwd -1 -salt 5RPVAd ${RND}); for i in clear root; do sudo usermod -p ${PWD} ${i}; done",
+        "swupd info",
+        "sudo mv /tmp/sshd_config /etc/ssh/sshd_config",
+        "sudo cat /dev/null > /home/clear/.ssh/authorized_keys"
+      ],
+      "type": "shell"
+    }
+  ],
+  "post-processors": [
+    [
+      {
+        "output": "manifest.json",
+        "strip_path": true,
+        "type": "manifest"
+      }
+    ]
+  ]
+}

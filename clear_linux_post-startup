@@ -1,0 +1,11 @@
+[Unit]
+Description=Post-startup systemd service.
+
+[Service]
+Type=simple
+User=root
+ExecStart=/bin/bash /bin/post-startup.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
