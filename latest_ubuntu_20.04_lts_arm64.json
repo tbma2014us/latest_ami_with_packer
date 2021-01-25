@@ -8,7 +8,7 @@
       "type": "amazon-ebs",
       "profile": "{{user `aws_profile`}}",
       "region": "{{user `region`}}",
-      "instance_type": "a1.medium",
+      "instance_type": "r6g.medium",
       "source_ami_filter": {
         "filters": {
           "name": "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-arm64-server-*",
