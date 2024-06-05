@@ -64,3 +64,4 @@ Produces latest fully updated AWS AMI images for Linux distributions using Packe
 [latest_ubuntu_18.04_lts_arm64.json](latest_ubuntu_18.04_lts_arm64.json)
 
 [![APACHE 2.0](https://img.shields.io/badge/License-Apache%202.0-brightgreen.svg?longCache=true&style=for-the-badge)](LICENSE)
+[![PACKER](https://img.shields.io/badge/packer-%23000000.svg?style=for-the-badge&logo=packer&logoColor=white)](https://www.packer.io/)
